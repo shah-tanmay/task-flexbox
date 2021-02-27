@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  /* padding: 10px; */
+  background-color: #8c8c8c;
+  color: white;
+  max-height: 120px;
+  position: sticky;
+}
+.header__text {
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+@media only screen and (max-width: 550px) {
+  .header__text {
+    font-size: 15px;
+    margin-left: 35%;
+  }
+} ;

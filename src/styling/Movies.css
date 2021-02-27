@@ -1,0 +1,89 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.movies__img > img {
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+.movies {
+  padding: 20px;
+}
+.movies__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
+}
+.movies__releasedate {
+  padding: 10px;
+}
+.movies__releasedate > p {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+.movies__knowmore {
+  padding: 10px;
+}
+.movies__knowmore > button {
+  font-size: 20px;
+  background-color: #8c8c8c;
+  color: white;
+  padding: 5px;
+  border: 1px solid lightgray;
+  font-weight: 300;
+  border: none;
+}
+button:hover {
+  border-radius: 10px;
+}
+.movies__container:hover {
+  transform: scale(1.2);
+  box-shadow: 3px 3px 5px 6px #8c8c8c;
+  border-radius: 15px;
+}
+@keyframes slideIn {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.movies__img > p {
+  padding: 5px;
+  animation-duration: 3s;
+  animation-name: slideIn;
+}
+@media only screen and (max-width: 550px) {
+  .movies__container {
+    width: 200px;
+  }
+  .movies__img > img {
+    width: 150px;
+    height: 150px;
+  }
+  .movies__releasedate > p {
+    font-size: 11px;
+  }
+  .movies__container:hover {
+    transform: scale(1.1);
+  }
+  .movies__knowmore > button {
+    font-size: 15px;
+  }
+}
