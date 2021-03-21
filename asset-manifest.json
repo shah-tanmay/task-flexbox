@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/flexbox-movies/static/css/main.a4683451.chunk.css",
+    "main.js": "/flexbox-movies/static/js/main.15e79a11.chunk.js",
+    "main.js.map": "/flexbox-movies/static/js/main.15e79a11.chunk.js.map",
+    "runtime-main.js": "/flexbox-movies/static/js/runtime-main.7f18014c.js",
+    "runtime-main.js.map": "/flexbox-movies/static/js/runtime-main.7f18014c.js.map",
+    "static/js/2.9c1f75ab.chunk.js": "/flexbox-movies/static/js/2.9c1f75ab.chunk.js",
+    "static/js/2.9c1f75ab.chunk.js.map": "/flexbox-movies/static/js/2.9c1f75ab.chunk.js.map",
+    "index.html": "/flexbox-movies/index.html",
+    "static/css/main.a4683451.chunk.css.map": "/flexbox-movies/static/css/main.a4683451.chunk.css.map",
+    "static/js/2.9c1f75ab.chunk.js.LICENSE.txt": "/flexbox-movies/static/js/2.9c1f75ab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7f18014c.js",
+    "static/js/2.9c1f75ab.chunk.js",
+    "static/css/main.a4683451.chunk.css",
+    "static/js/main.15e79a11.chunk.js"
+  ]
+}
