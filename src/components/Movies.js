@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styling/Movies.css";
+import ReactCardFlip from "react-card-flip";
 
 function Movies({ title, releaseYear, director, actor, plot, image }) {
   const [details, setDetails] = useState({
@@ -10,13 +11,28 @@ function Movies({ title, releaseYear, director, actor, plot, image }) {
     plot,
     image,
   });
-  const [toggle, setToggle] = useState(true);
+  const handleIsFlipped = () => {
+    setIsFlipped(!isFlipped);
+  };
+  const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className="movies">
-      <div className="movies__container">
-        <div className="movies__img">
-          {toggle && <img src={image} />}
-          {!toggle && (
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+      <div className="frontside__card">
+        <div className="movies">
+          <div className="movies__container">
+            <div className="movies__img">{<img src={image} />}</div>
+            <div className="movies__releasedate">
+              <p>{title}</p>
+            </div>
+            <div className="movies__knowmore">
+              <button onClick={handleIsFlipped}>Know More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="backside__card">
+        <div className="movies__container">
+          {
             <p>
               <strong>Director: </strong> {director}
               <br />
@@ -26,18 +42,13 @@ function Movies({ title, releaseYear, director, actor, plot, image }) {
               <br />
               <strong>Plot: </strong> {plot}
             </p>
-          )}
-        </div>
-        <div className="movies__releasedate">
-          <p>{toggle && title}</p>
-        </div>
-        <div className="movies__knowmore">
-          <button onClick={() => setToggle(!toggle)}>
-            {toggle ? "Know More" : "Back"}
-          </button>
+          }
+          <div className="movies__knowmore">
+            <button onClick={handleIsFlipped}>Go Back</button>
+          </div>
         </div>
       </div>
-    </div>
+    </ReactCardFlip>
   );
 }
 
